@@ -23,7 +23,7 @@ jobs:
         id: meta_api_gateway
         uses: docker/metadata-action@v2
         with:
-          images: amritha172/healthyglam-api_gateway
+          images: irhadudheen/healthyglam-api_gateway
 
       - name: Build and push healthyglam-api_gateway Docker image
         uses: docker/build-push-action@v2
@@ -38,7 +38,7 @@ jobs:
         id: meta_comment_service
         uses: docker/metadata-action@v2
         with:
-          images: amritha172/healthyglam-comment_service
+          images: irhadudheen/healthyglam-comment_service
 
       - name: Build and push healthyglam-comment_service Docker image
         uses: docker/build-push-action@v2
@@ -53,7 +53,7 @@ jobs:
         id: meta_auth_service
         uses: docker/metadata-action@v2
         with:
-          images: amritha172/healthyglam-auth_service
+          images: irhadudheen/healthyglam-auth_service
 
       - name: Build and push healthyglam-auth_service Docker image
         uses: docker/build-push-action@v2
@@ -68,7 +68,7 @@ jobs:
         id: meta_post_details_service
         uses: docker/metadata-action@v2
         with:
-          images: amritha172/healthyglam-post_details_service
+          images: irhadudheen/healthyglam-post_details_service
 
       - name: Build and push healthyglam-post_details_service Docker image
         uses: docker/build-push-action@v2
@@ -83,7 +83,7 @@ jobs:
         id: meta_post_service
         uses: docker/metadata-action@v2
         with:
-          images: amritha172/healthyglam-post_service
+          images: irhadudheen/healthyglam-post_service
 
       - name: Build and push healthyglam-post_service Docker image
         uses: docker/build-push-action@v2
