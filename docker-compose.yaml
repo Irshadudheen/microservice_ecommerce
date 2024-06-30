@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin123
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  user:
+    build: ./backend/user
+    ports:
+      - "4040:4040"
+
+  product:
+    build: ./backend/product
+    ports:
+      - "4041:4041"
+
+
+  cart:
+    build: ./backend/cart
+    ports:
+      - "4042:4042"

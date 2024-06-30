@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order
+  template:
+    metadata:
+      labels:
+        app: order
+    spec:
+      containers:
+        - name: order 
+          image: irhadudheen/shopping:shopping
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-srv
+spec:
+  type: NodePort
+  selector:
+    app: order 
+  ports:
+    - name: order-srv-port
+      protocol: TCP
+      port: 4041 
+      targetPort: 4041 
+      

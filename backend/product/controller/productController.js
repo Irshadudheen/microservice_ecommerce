@@ -13,7 +13,7 @@ const setProduct = asyncHandler(async (req,res)=>{
     const{name,price,quantity,image,productDescription}=req.body;
     const product = await productModel.create(req.body)
     const connection = await amqp.connect({
-        hostname: "localhost",
+        hostname: "rabbitmq",
         port: 5672,
         username: "admin",
         password: "admin123",
