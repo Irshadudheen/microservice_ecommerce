@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cart 
-          image: irhadudheen/shopping:shopping
+          image: irhadudheen/cart_service:latest
 
 ---
 apiVersion: v1

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: order 
-          image: irhadudheen/shopping:shopping
+          image: irhadudheen/order_service:latest
 
 ---
 apiVersion: v1
