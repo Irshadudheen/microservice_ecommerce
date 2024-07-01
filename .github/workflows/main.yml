@@ -16,4 +16,4 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: irhadudheen
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{secrets.DOCKER_PASSWORD}}

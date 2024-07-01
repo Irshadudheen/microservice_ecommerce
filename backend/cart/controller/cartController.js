@@ -5,6 +5,7 @@ const addToCart = asyncHandler( async (req,res)=>{
     const{clientId}=req
     const{id}=req.params
 
+    
     const product = await productModel.findById(id)
     const cart = await cartModel.findOne({clientId})
     const checkProductInCart = cart.products.some(product=>product.productId==id)
